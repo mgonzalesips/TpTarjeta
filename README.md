@@ -42,3 +42,5 @@ Además de las tareas planteadas, cada grupo tiene tareas pendientes de la itera
 - Existen dos tipos de franquicia en lo que refiere a tarjetas, las franquicias parciales, como el medio boleto estudiantil o el universitario, y las completas como las de jubilados(Notar que también existe boleto gratuito para estudiantes).
 - Implementar cada tipo de tarjeta como una Herencia de la tarjeta original.
 - Para esta iteración considerar simplemente que cuando se paga con una tarjeta del tipo MedioBoleto el costo del pasaje vale la mitad, independientemente de cuántas veces se use y que día de la semana sea.
+- Escribir un test que valide que una tarjeta de FranquiciaCompleta siempre puede pagar un boleto.
+- Escribir un test que valide que el monto del boleto pagado con medio boleto es siempre la mitad del normal.
