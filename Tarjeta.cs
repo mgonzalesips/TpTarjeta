@@ -39,7 +39,7 @@ public class Tarjeta{
   }
 
   //Metodo para el pago del pasaje
-  public bool PagarPasaje(){
+   public virtual bool PagarPasaje() {
     if (saldo >= tarifa_basica) {
       saldo -= tarifa_basica;
       return true;
@@ -53,5 +53,40 @@ public class Tarjeta{
      monto_carga == 5000 || monto_carga == 6000 || monto_carga == 7000 ||
      monto_carga == 8000 || monto_carga == 9000;
   }
+  
+  public class MedioBoleto : Tarjeta {
+    private const float tarifa_medio_boleto = tarifa_basica / 2;
+
+    public MedioBoleto(float saldo_inicial) : base(saldo_inicial) {}
+
+    public override bool PagarPasaje() {
+      if (saldo >= tarifa_medio_boleto || saldo >= Tarjeta.saldo_negativo_max) {
+        saldo -= tarifa_medio_boleto;
+        return true;
+      }
+      return false;
+    }
+  }
+
+  public class GratuitoJubilados : Tarjeta {
+    public GratuitoJubilados(float saldo_inicial) : base(saldo_inicial) {}
+
+    public override bool PagarPasaje() {
+      Console.WriteLine("Pasaje gratuito.");
+      Console.WriteLine($"Saldo restante {saldo}");
+      return true;
+    }
+  }
+
+  public class GratuitoEstudiantes : Tarjeta {
+    public GratuitoEstudiantes(float saldo_inicial) : base(saldo_inicial) {}
+
+    public override bool PagarPasaje() {
+      Console.WriteLine("Pasaje gratuito.");
+      Console.WriteLine($"Saldo restante {saldo}");
+      return true;
+    }
+  }
+  
   
 }
