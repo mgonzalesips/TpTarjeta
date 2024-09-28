@@ -6,8 +6,8 @@ namespace TP{
     private float Saldo;
 
     public Boleto(string linea, float saldo){
-      this.Linea = linea;
-      this.Saldo = saldo;
+      Linea = linea;
+      Saldo = saldo;
     }
   }
 }

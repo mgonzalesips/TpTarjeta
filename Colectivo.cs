@@ -9,7 +9,7 @@ namespace TP{
       this.Linea = linea;
     }
     
-    public Boleto Pasaje(Tarjeta tarjeta){
+    public Boleto pagarCon(Tarjeta tarjeta){
       
       if(tarjeta.VerSaldo() >= precio){ 
         tarjeta.RestarSaldo(precio);
@@ -17,7 +17,7 @@ namespace TP{
       }
       else{
         Console.WriteLine("No tiene saldo suficiente");
-           return null; 
+        return null; 
       }  
     }
   }
