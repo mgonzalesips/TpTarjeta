@@ -2,9 +2,9 @@ using System;
 using BoletoNamespace;
 
 namespace TarjetaNamespace {
-public class tarjeta {
+
+  public class tarjeta {
   public int saldo;
-  public int cargas;
   public int limite = 9900;
 
   public void cargarSaldo(int monto){
@@ -14,8 +14,21 @@ public class tarjeta {
       Console.WriteLine("El monto no es valido");
     }
   }
+
+  public virtual int precioBoleto(int precio){
+    return precio;
+  }
+}
+
+  public class MedioBoleto : tarjeta {
+    public override int precioBoleto(int precio){
+      return precio/2;
+    }
   }
 
-
-
+  public class FranquiciaCompleta : tarjeta {
+    public override int precioBoleto(int precio){
+      return 0;
+    }
   }
+}
