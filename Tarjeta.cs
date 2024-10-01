@@ -1,12 +1,10 @@
-using System;
-using System.Linq;
-
 namespace TransporteUrbano
 {
     public class Tarjeta
     {
         private decimal saldo;
         private const decimal LimiteSaldo = 9900m;
+        private const decimal CostoPasaje = 940m; 
         private static readonly decimal[] MontosAceptados = { 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000 };
 
         public Tarjeta(decimal saldoInicial)
@@ -33,11 +31,11 @@ namespace TransporteUrbano
             return true;
         }
 
-        public bool DescontarPasaje(decimal costo)
+        public bool DescontarPasaje()
         {
-            if (saldo >= costo)
+            if (saldo >= CostoPasaje)
             {
-                saldo -= costo;
+                saldo -= CostoPasaje;
                 return true;
             }
 
@@ -49,4 +47,6 @@ namespace TransporteUrbano
             return saldo;
         }
     }
+}
+
 }
