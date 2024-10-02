@@ -9,7 +9,7 @@ namespace Iteraciones
     
     public Boleto? pagarCon(Tarjeta tarjeta){
       Boleto boleto = new Boleto(tarjeta);
-      if (tarjeta.saldo < Boleto.tarifa_pasaje){
+      if (tarjeta.saldo + 480 < Boleto.tarifa_pasaje){
         return null;
       }
       else {
