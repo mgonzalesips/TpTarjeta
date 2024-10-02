@@ -5,16 +5,17 @@ namespace Iteraciones
 {
   class Colectivo{
     //Atributos
+
     //Métodos 
     
     public Boleto? pagarCon(Tarjeta tarjeta){
       Boleto boleto = new Boleto(tarjeta);
-      if (tarjeta.saldo < Boleto.tarifa_pasaje){
+      if (tarjeta.saldo < ((int)(Boleto.tarifa_pasaje * tarjeta.Descuento_franquicia))){
         return null;
       }
       else {
-        boleto.saldo_restante = tarjeta.saldo - Boleto.tarifa_pasaje;
-        tarjeta.saldo -= Boleto.tarifa_pasaje;
+        boleto.saldo_restante = tarjeta.saldo - ((int)(Boleto.tarifa_pasaje * tarjeta.Descuento_franquicia));
+        tarjeta.saldo -= ((int)(Boleto.tarifa_pasaje * tarjeta.Descuento_franquicia));
       return boleto;}
     } 
   }
