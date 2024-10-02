@@ -1,14 +1,13 @@
 using System;
-using Iteracion1;
+using Iteraciones;
 
-namespace Iteracion1
+namespace Iteraciones
 {
   class Colectivo{
     //Atributos
-    Tarjeta tarjeta;
     //Métodos 
     
-    public Boleto pagarCon(Tarjeta tarjeta){
+    public Boleto? pagarCon(Tarjeta tarjeta){
       Boleto boleto = new Boleto(tarjeta);
       if (tarjeta.saldo < Boleto.tarifa_pasaje){
         return null;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Iteracion1
+namespace Iteraciones
 {
   class Tarjeta{
     //Atributos

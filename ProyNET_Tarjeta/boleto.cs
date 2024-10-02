@@ -1,7 +1,7 @@
 using System;
-using Iteracion1;
+using Iteraciones;
 
-namespace Iteracion1
+namespace Iteraciones
 {
   class Boleto{
     //Atributos
