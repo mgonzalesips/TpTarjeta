@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using Iteraciones;
-
 class Program {
   public static void Main (string[] args) {
     Console.WriteLine("\n Test tarjeta queda con $300 de saldo negativo");
@@ -59,5 +58,12 @@ class Program {
     tarjetaC2.cargarTarjeta(4000);
     cole.pagarCon(tarjetaC2);
     Console.WriteLine($"Por acreditar:{tarjetaC2.AcreditaciónPendiente}\n Saldo de la tarjeta:{tarjetaC2.Saldo}\n");
+
+    Console.WriteLine("\n Test medio boleto actualizado");
+    MedioBoleto tarjetaMB1 = new MedioBoleto(10000);
+    Boleto boletoMB1 = cole.pagarCon(tarjetaMB1);
+    Boleto boletoMB2 = cole.pagarCon(tarjetaMB1);
+    if(boletoMB2 == null)
+      Console.WriteLine("No se pudo pagar el pasaje debido al limite de 5mins");
   }
 }

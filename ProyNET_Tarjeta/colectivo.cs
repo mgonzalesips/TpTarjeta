@@ -14,14 +14,17 @@ namespace Iteraciones
     //Métodos 
     
     public Boleto? pagarCon(Tarjeta tarjeta){
+      tarjeta.CalcularFranquicia();
       Boleto boleto = new Boleto(tarjeta,this);
       int tarifa = boleto.GetTotalPagar();
-      if (tarjeta.Saldo +480 < tarifa){
+      if (!tarjeta.EsPosibleViajar(tarifa)){
         return null;
       }
       else {
         tarjeta.Pagar(tarifa);
+        tarjeta.CantUsosHoy = tarjeta.CantUsosHoy + 1;
         boleto.SaldoRestante = tarjeta.Saldo;
+        tarjeta.AgregarBoleto(boleto);
         if (tarjeta.DeudaPaga > 0)
           {boleto.Descripcion = $"El boleto abonó {tarjeta.DeudaPaga} pesos de saldo negativo en la ultima carga";
           tarjeta.DeudaPaga = 0;}
