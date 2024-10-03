@@ -1,0 +1,15 @@
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.AssemblyInfoInputs.cache
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.AssemblyInfo.cs
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.sourcelink.json
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\bin\Debug\net8.0\ProyNET_Tarjeta.exe
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\bin\Debug\net8.0\ProyNET_Tarjeta.deps.json
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\bin\Debug\net8.0\ProyNET_Tarjeta.runtimeconfig.json
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\bin\Debug\net8.0\ProyNET_Tarjeta.dll
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\bin\Debug\net8.0\ProyNET_Tarjeta.pdb
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.dll
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\refint\ProyNET_Tarjeta.dll
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.pdb
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ProyNET_Tarjeta.genruntimeconfig.cache
+C:\Users\Asus\Documents\Trabajos Poli\TpTarjeta\ProyNET_Tarjeta\obj\Debug\net8.0\ref\ProyNET_Tarjeta.dll
