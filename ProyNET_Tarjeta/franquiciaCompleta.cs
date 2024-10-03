@@ -25,7 +25,10 @@ class FranquiciaCompleta : Tarjeta
                 return true;
          }
          public override void CalcularFranquicia(){
-            desc = desc;
+            if (cant_usos_hoy < 2)
+                Descuento_franquicia = 0.0f;
+            else 
+                Descuento_franquicia = 1.0f;  
          }
     }
 }

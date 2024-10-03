@@ -35,7 +35,7 @@ class MedioBoleto : Tarjeta
                 return true;
             }  
         public override void CalcularFranquicia(){
-            if (cant_usos_hoy <= 4)
+            if (cant_usos_hoy < 4)
                 Descuento_franquicia = 0.5f;
             else 
                 Descuento_franquicia = 1.0f;  

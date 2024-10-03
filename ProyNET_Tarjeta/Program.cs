@@ -65,5 +65,22 @@ class Program {
     Boleto boletoMB2 = cole.pagarCon(tarjetaMB1);
     if(boletoMB2 == null)
       Console.WriteLine("No se pudo pagar el pasaje debido al limite de 5mins");
+
+    Console.WriteLine("\n Test medio boleto actualizado");
+    FranquiciaCompleta tarjetaFC1 = new FranquiciaCompleta(0);
+    Boleto boletoFC1 = cole.pagarCon(tarjetaFC1);
+    if (boletoFC1 != null)
+      Console.WriteLine("boleto pago exitosamente");
+      Console.WriteLine($"boleto {tarjetaFC1.CantUsosHoy} ,descuento franquicia: {tarjetaFC1.Descuento_franquicia}");
+    Boleto boletoFC2 = cole.pagarCon(tarjetaFC1);
+    if (boletoFC2 != null)
+      Console.WriteLine("boleto pago exitosamente");
+      Console.WriteLine($"boleto {tarjetaFC1.CantUsosHoy} ,descuento franquicia: {tarjetaFC1.Descuento_franquicia}");
+    Boleto boletoFC3 = cole.pagarCon(tarjetaFC1);
+    if (boletoFC3 != null)
+      Console.WriteLine("boleto pago exitosamente");
+    if (boletoFC3 == null)
+      Console.WriteLine("boleto no fue creado ya que el segundo viaje dejo de ser gratis");
+    Console.WriteLine($"boleto {tarjetaFC1.CantUsosHoy} ,descuento franquicia: {tarjetaFC1.Descuento_franquicia}");
   }
 }
