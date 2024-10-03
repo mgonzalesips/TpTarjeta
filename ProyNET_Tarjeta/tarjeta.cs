@@ -7,7 +7,7 @@ namespace Iteraciones
     //Atributos
     private static int id_contador = 0;
     public int Id {get; private set;}
-    private int saldo;
+    protected int saldo;
     public int Saldo {
         get { return saldo; }  
         set { saldo = value; }  
@@ -24,9 +24,13 @@ namespace Iteraciones
     }
     public static int max_carga = 36000;
     public static List<int> posibles_cargas = new List<int> {2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000};
-    public abstract float Descuento_franquicia {get;}
-    private List<Boleto> boletos_pagos = new List<Boleto>();
-
+    public abstract float Descuento_franquicia { get;set; }
+    protected List<Boleto> boletos_pagos = new List<Boleto>();
+    protected int cant_usos_hoy;
+    public int CantUsosHoy {
+        get { return cant_usos_hoy; }  
+        set { cant_usos_hoy= value; }  
+    }
     //Constructor
 
     public Tarjeta(int saldo){
@@ -38,7 +42,8 @@ namespace Iteraciones
       Id = ++id_contador;
     } 
     //Métodos
-  
+    public abstract bool EsPosibleViajar(int tarifa);
+    public abstract void CalcularFranquicia();
     public bool cargarTarjeta(int carga){
       if (posibles_cargas.Contains(carga) && (saldo+carga) <= max_carga){
           if (saldo < 0){
@@ -55,9 +60,9 @@ namespace Iteraciones
       else
           return false;
     }
-    public List<Boleto> GetBoletos()
-    {
-      return new List<Boleto>(boletos_pagos);
+    public void AgregarBoleto(Boleto boleto){
+      if (boleto != null) 
+        {boletos_pagos.Add(boleto);}
     }
 
     public void Pagar(int tarifa){
