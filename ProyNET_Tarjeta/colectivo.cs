@@ -20,13 +20,13 @@ namespace Iteraciones
         return null;
       }
       else {
-        tarjeta.Saldo = tarjeta.Saldo - tarifa;
+        tarjeta.Pagar(tarifa);
         boleto.SaldoRestante = tarjeta.Saldo;
         if (tarjeta.DeudaPaga > 0)
-          {boleto.Descripcion = $"El boleto abonó {tarjeta.DeudaPaga} pesos de saldo negativo en la ultima carga";}
+          {boleto.Descripcion = $"El boleto abonó {tarjeta.DeudaPaga} pesos de saldo negativo en la ultima carga";
+          tarjeta.DeudaPaga = 0;}
         else 
           {boleto.Descripcion = null;}
-        tarjeta.DeudaPaga = 0;
       return boleto;}
     } 
   }

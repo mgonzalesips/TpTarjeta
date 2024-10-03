@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyNET_Tarjeta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+158aaddd2ecb9618f015837bdfe5abf32db46eb6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6322e9c32124b5970c9437398c1cb90dcd893399")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyNET_Tarjeta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyNET_Tarjeta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -51,5 +51,13 @@ class Program {
     Console.WriteLine($"LineaColectivo:{boleto2.GetLineaColectivo()}\n Total Pagado:{boleto2.GetTotalPagar()}\n");
     Console.WriteLine($"Saldo tarjeta:{boleto2.GetSaldo()}\n Id tarjeta:{boleto2.GetIdTarjeta()}");
     Console.WriteLine($"{boleto2.Descripcion}");
+
+    Console.WriteLine("\n Test acreditación pendiente");
+    TarjetaComun tarjetaC1 = new TarjetaComun(36500);
+    Console.WriteLine($"Por acreditar:{tarjetaC1.AcreditaciónPendiente}");
+    TarjetaComun tarjetaC2 = new TarjetaComun(34500);
+    tarjetaC2.cargarTarjeta(4000);
+    cole.pagarCon(tarjetaC2);
+    Console.WriteLine($"Por acreditar:{tarjetaC2.AcreditaciónPendiente}\n Saldo de la tarjeta:{tarjetaC2.Saldo}\n");
   }
 }
