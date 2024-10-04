@@ -3,10 +3,12 @@ namespace Space
 {
     public class Colectivo
     {
+
         public int tarifa;
         public int precio = 940;
         public string linea; 
         public string TipoTarjeta;
+
 
         public Colectivo(string linea1)
         {
@@ -15,6 +17,7 @@ namespace Space
 
         public bool Descontar(Tarjeta tarjeta)
         {
+
             if (tarjeta is GratuitoBoleto)
             {
                 tarifa = 0;
@@ -51,8 +54,10 @@ namespace Space
     {
         if (Descontar(tarjeta))
         {
+
             tarjeta.historial[tarjeta.historial.Length] = new Boleto(tarifa, linea, tarjeta.saldo, TipoTarjeta);
             return new Boleto(tarifa, linea, tarjeta.saldo, TipoTarjeta);
+
         }
         else
         {
