@@ -4,7 +4,8 @@ namespace Space
     public class Colectivo
     {
         public int tarifa = 940;
-        public string linea;
+        public string linea; 
+
         public Colectivo(string linea1)
         {
             this.linea = linea1;
@@ -12,7 +13,7 @@ namespace Space
 
         public bool Descontar(Tarjeta tarjeta)
         {
-            if (tarjeta.saldo - tarifa >= 0)
+            if (tarjeta.saldo - tarifa >= tarjeta.limite_neg)
             {
                 tarjeta.saldo -= tarifa;
                 return true;
@@ -24,18 +25,18 @@ namespace Space
             }
         }
 
-        public Boleto PagarCon(Tarjeta tarjeta)
+    public Boleto PagarCon(Tarjeta tarjeta)
+    {
+        if (Descontar(tarjeta))
         {
-            if (Descontar(tarjeta))
-            {
-                tarjeta.historial[tarjeta.historial.Length] = new Boleto(tarifa, linea, tarjeta.saldo);
-                return new Boleto(tarifa, linea, tarjeta.saldo);
-            }
-            else
-            {
-                Console.WriteLine("No se pudo emitir el boleto.");
-                return null;
-            }
+            tarjeta.historial[tarjeta.historial.Length] = new Boleto(tarifa, linea, tarjeta.saldo);
+            return new Boleto(tarifa, linea, tarjeta.saldo);
+        }
+        else
+        {
+            Console.WriteLine("No se pudo emitir el boleto.");
+            return null;
         }
     }
+}
 }
