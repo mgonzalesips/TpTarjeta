@@ -6,6 +6,7 @@ namespace Space
         public int saldo;
         public int id;
         public int saldo_max = 9900;
+        public int limite_neg = -480;
         public int[] montos_posibles = new int[] { 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000 };
         public Boleto[] historial;
 
