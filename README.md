@@ -71,3 +71,33 @@ Una tarjeta SUBE no puede almacenar más de 36000 pesos. Por lo tanto cuando se 
 - Escribir un test que valide que si a una tarjeta se le carga un monto que supere el máximo permitido, se acredite el saldo hasta alcanzar el máximo(6600) y que el excedente quede almacenado y pendiente de acreditación.
 - Escribir un test que valide que luego de realizar un viaje, verifique si hay saldo pendiente de acreditación y recargue la tarjeta hasta llegar al máximo nuevamente.
 
+# Iteracion 4.
+
+El boleto de colectivo aumento su tarifa a $1200. Actualizar la tarifa de los colectivos.
+
+# Boleto de uso frecuente
+Las tarjetas SUBE cuentan con el boleto de uso frecuente. Este es un beneficio que aplica un descuento al monto del boleto dependiendo de cuántos viajes se hagan.
+- Del viaje 1 al 29: Tarifa normal.
+- Del viaje 30 al 79: 20% de descuento.
+- Del viaje 79 al 80: 25% de descuento.
+- Del viaje 81 en adelante: Tarifa normal.
+
+La cantidad de viajes se cuenta del primer al ultimo dia de cada mes. Este beneficio se aplicará *sólo* sobre las tarjetas normales.
+Implementar esta nueva funcionalidad.
+Escribir los test correspondientes para validar el correcto funcionamiento del código.
+# Franquicias
+Todas las franquicias(medio boleto estudiantil, jubilado, medio boleto universitario y boleto educativo gratuito) solo pueden utilizarse en una determinada franja horaria:
+
+Lunes a viernes de 6 a 22. 
+
+Fuera de este intervalo de tiempo no es posible pagar con ninguna de estas franquicias.
+Escribir tests que validen que no se puedan realizar viajes fuera de la franja horaria y/o días correspondientes.
+
+# Líneas interurbanas
+En nuestra ciudad existen diversas líneas de colectivo. Algunas solo viajan dentro de la ciudad pero otras van hacia la zona metropolitana de Rosario(ej: Galvez, Baigorria). Estas líneas tienen otra tarifa.
+
+Implementar las líneas de colectivo interurbanas.
+La tarifa interurbana es de: $2500.
+
+Las líneas de colectivo interurbanas admiten todas las franquicias y siguen los mismos criterios que las líneas de colectivo urbanas.
+
